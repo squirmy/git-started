@@ -57,4 +57,5 @@ while IFS= read -r line; do
 
     out_file="$public_key_dir/$username:SHA256:$base64url"
     echo "$line" > "$out_file"
+    chmod 600 "$out_file"
 done <<< "$keys"
